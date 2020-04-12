@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open Sans">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css">
+    <script type="text/javascript" src="js/jquery/jquery-3.3.1.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <div>
+            <h1 class="naslov">Java script - Vežbe</h1>
+
+            <input type="button" onclick="getId(this.id)" id="vezba01" value="Vezba 01">
+            <input type="button" onclick="getId(this.id)" id="vezba02" value="Vezba 02">
+            <input type="button" onclick="getId(this.id)" id="vezba03" value="Vezba 03">
+            <input type="button" onclick="getId(this.id)" id="vezba04" value="Vezba 04">
+            <input type="button" onclick="getId(this.id)" id="vezba05" value="Vezba 05">
+            <input type="button" onclick="getId(this.id)" id="vezba06" value="Vezba 06">
+            <input type="button" onclick="getId(this.id)" id="vezba07" value="Vezba 07">
+            <input type="button" onclick="getId(this.id)" id="vezba08" value="Vezba 08">
+            <input type="button" onclick="getId(this.id)" id="k1" value="k1">
+        </div>
+
+    </section>
+    <div id="sadrzaj"></div>
+    <script>
+        function getId(cliked_id) {
+            var x = cliked_id;
+            var z = '<object type="text/html" id="test" data=' + x + '.html></object>';
+            document.getElementById("sadrzaj").innerHTML = z;
+        }
+
+        //function getId(cliked_id) {
+        //var x = cliked_id;
+        //var z = '<object type="text/html" id="test" data=' + x + '.html></object>';
+        //$('#sadrzaj').load('http://192.168.200.240/js/' + x + '.html #vezba_content');
+        //}
+    </script>
+</body>
+
+</html>
