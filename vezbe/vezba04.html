@@ -20,21 +20,14 @@
             <p id="zadatak"> Zadatak 01: Brojevi od 0 do zeljenog broja:</p>
             <input type="text" id="broj_input01" placeholder="Unesite zeljeni broj">
             <input type="button" id="plus_jedan" value="Ispiši!!">
+            <input type="button" onclick="testrange()" value="Ispiši!! FP">
+            <input type="button" onclick="testrange_arrow()" value="Ispiši!! arrow FP">
+
             <p>Brojevi od 0 do
                 <span id="zeljeni_broj01">___</span>
             </p>
             <div id="ispisi_brojeve01">&nbsp;</div>
             <hr>
-            <script>
-                document.getElementById("plus_jedan").onclick = function plusJedan() {
-                    document.getElementById("ispisi_brojeve01").innerHTML = "";
-                    var krajnji_broj01 = document.getElementById('broj_input01').value;
-                    document.getElementById("zeljeni_broj01").innerHTML = krajnji_broj01;
-                    for (var i = 0; i <= krajnji_broj01; i++) {
-                        document.getElementById("ispisi_brojeve01").innerHTML += "<br>" + i;
-                    }
-                }
-            </script>
             <!--VEZBA 04, zadatak 02-->
             <p id="zadatak"> Zadatak 02: Parni brojevi</p>
             <input type="text" id="broj_input02" placeholder="Unesite zeljeni broj">
@@ -101,5 +94,5 @@
         </div>
     </section>
 </body>
-
+<script src="../js/vezba04.js"></script>
 </html>

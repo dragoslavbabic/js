@@ -18,7 +18,10 @@
             <!--VEZBA 01, zadatak 01-->
             <p id="zadatak"> Zadatak 01: Pretvaranje Kelvina u Farenhajt:</p>
             <input type="text" id="kelvin_input" placeholder="Unesite vrednost">
-            <input type="button" id="izracunaj_k_to_f" value="Pretvori u Farenhajt">
+            <input type="button" onclick="KelToFar()" id="izracunaj_k_to_f" value="Pretvori u Farenhajt">
+            <input type="button" onclick="KelToFarFP()"  value="Pretvori u Farenhajt - Nested Function">
+            <input type="button" onclick="KelToFarPure()"  value="Pretvori u Farenhajt - Samostalna funkcija">
+
             <p>Temperatura je
                 <span id="kelvin">___</span>&nbsp; stepeni Farenhajta</p>
             <p id="farenhajt_01">&nbsp;</p>
@@ -28,10 +31,11 @@
             <p id="zadatak"> Zadatak 02: Povrsina i obim pravougaonika</p>
             <input type="text" id="a_input" placeholder="Duzina stranice A">
             <input type="text" id="b_input" placeholder="Duzina stranice B">
-            <input type="button" id="obim_povrsina" value="Izracunaj obim i povrsinu">
+            <input type="button" onclick="ObimPovrsina()" id="obim_povrsina" value="Izracunaj obim i povrsinu">
+            <input type="button" onclick="ObimPovrsinaFP()" id="obim_povrsina" value="Izracunaj obim i povrsinu - FP">
             <p>Povrsina pravougaonika stranice a=
                 <span id="stranica_a">___</span> i stranice b =
-                <span id="stranica_b">___</span> iznosi
+                <span id="stranica_b">___</span> <br> iznosi 
                 <span id="povrsina">___</span>, a obim
                 <span id="obim">___</span>.
             </p>

@@ -96,38 +96,24 @@
                 }
             </script>
             <!--VEZBA 05, zadatak 04-->
-            <p id="zadatak"> Zadatak 04: Samoglasnici</p>
+            <p id="zadatak"> Zadatak 04: Broj jedinstvenih karaktera u rečenici</p>
             <input type="text" id="recenica">
-            <p>Broj samoglasnika u recenici je:
+            <p>Broj karaktera u recenici je:
                 <span id="broj_samoglasnika">___</span>
             </p>
-            <input type="button" id="odredi_broj" value="Odredi!">
+            <div id="broj_karaktera">&nbsp;</div>
+            <input type="button" onclick="BrojKaraktera()" value="Odredi!">
+            <input type="button" onclick="BrojKarakteraFP()" value="Odredi! - FP">
+            <input type="button" onclick="BrojKarakteraFP_Arrow()" value="Odredi! - Arrow">
+
             <hr>
-            <script>
-                function BrojSamoglasnika() {
-                    var recenica = document.getElementById("recenica").value;
-                    recenica = recenica.toUpperCase();
-                    var test = recenica.length;
-                    var b = 0;
-                    for (var i = 0; i <= recenica.length - 1; i++) {
-                        if (recenica[i] == "A" || recenica[i] == "E" || recenica[i] == "I" || recenica[i] == "O" ||
-                            recenica[i] == "U") {
-                            b += 1;
-                        }
-                    }
-                    return b;
-                }
-                document.getElementById("odredi_broj").onclick = function samoglasnik() {
-                    document.getElementById("broj_samoglasnika").innerHTML = BrojSamoglasnika();
-                }
-            </script>
 
             <!--VEZBA 05, zadatak 05-->
             <p id="zadatak"> Zadatak 05: Tabela sa unosom</p>
             <input type="text" id="redovi_tabela"> Unesi zeljeni broj redova u tabeli!
             <br/>
             </p>
-            <input type="button" id="redovi_ispisi" value="Broj redova">
+            <input type="button"  id="redovi_ispisi" value="Broj redova">
             <div id="polja"></div>
             <hr>
             <script>
@@ -143,5 +129,5 @@
         </div>
     </section>
 </body>
-
+<script src="../js/vezba05.js"></script>
 </html>
