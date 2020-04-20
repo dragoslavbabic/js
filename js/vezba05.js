@@ -18,29 +18,26 @@ function BrojKaraktera() {
 //bez upotreba "for" petlje
 const recenica = document.getElementById("recenica");
 function BrojKarakteraFP() {
-    const broj_karaktera = function IzbrojKaraktere(tekst) {
+  document.getElementById("broj_karaktera").innerHTML ='';
+    const broj_karaktera = function (tekst) {
         return tekst.split('').reduce(function (tempNiz, char) {
           tempNiz[char] = (tempNiz[char] || 0) + 1;
           return tempNiz;
-        }, {});
+        }, {})
       };
       //console.log(broj_karaktera(recenica.value));
-      for (var i in broj_karaktera(recenica.value)){
+      for (let i in broj_karaktera(recenica.value)){
         document.getElementById("broj_karaktera").innerHTML += '<br> Broj karaktera "' + i + '" = ' + broj_karaktera(recenica.value)[i];
       }
 }
 
-
+//Funkcija napisana u arrow formatu
 function BrojKarakteraFP_Arrow(){
-    const broj_karaktera = tekst => tekst.split('').reduce((tempNiz,char)=>{
-        tempNiz[char]=(tempNiz[char]||0)+ 1;
-        return tempNiz;
-    },{})
-    broj_karaktera(recenica.value).forEach(document.getElementById("broj_karaktera").innerHTML += '<br> Broj karaktera "' + i + '" = ' + broj_karaktera(recenica.value)[i]);
-
-    //for (var i in broj_karaktera(recenica.value)){
-        //document.getElementById("broj_karaktera").innerHTML += '<br> Broj karaktera "' + i + '" = ' + broj_karaktera(recenica.value)[i];
-     // }
+  document.getElementById("broj_karaktera").innerHTML ='';
+    const broj_karaktera = tekst => tekst.split('').reduce((tempNiz,char)=>{tempNiz[char]=(tempNiz[char]||0)+ 1;return tempNiz;},{})
+    for (let i in broj_karaktera(recenica.value)){
+        document.getElementById("broj_karaktera").innerHTML += '<br> Broj karaktera "' + i + '" = ' + broj_karaktera(recenica.value)[i];
+      }
+        
 }
-//broj_karaktera(recenica.value).forEach((i) => document.getElementById("broj_karaktera").innerHTML += '<br> Broj karaktera "' + i + '" = ' + broj_karaktera(recenica.value)[i]);
 
