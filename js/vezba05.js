@@ -9,7 +9,7 @@ function BrojKaraktera() {
         else occ[niz[i]] = 1;
     }
     for (var i in occ) {
-        console.log('count of ' + i + ' -> ' + occ[i]);
+        console.log('broj karaktera ' + i + ' -> ' + occ[i]);
         document.getElementById("broj_karaktera").innerHTML += '<br> Broj karaktera "' + i + '" = ' + occ[i];
     }
 }
