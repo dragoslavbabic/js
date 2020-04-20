@@ -36,8 +36,11 @@ function BrojKarakteraFP_Arrow(){
         tempNiz[char]=(tempNiz[char]||0)+ 1;
         return tempNiz;
     },{})
-    for (var i in broj_karaktera(recenica.value)){
-        document.getElementById("broj_karaktera").innerHTML += '<br> Broj karaktera "' + i + '" = ' + broj_karaktera(recenica.value)[i];
-      }
+    broj_karaktera(recenica.value).forEach(document.getElementById("broj_karaktera").innerHTML += '<br> Broj karaktera "' + i + '" = ' + broj_karaktera(recenica.value)[i]);
+
+    //for (var i in broj_karaktera(recenica.value)){
+        //document.getElementById("broj_karaktera").innerHTML += '<br> Broj karaktera "' + i + '" = ' + broj_karaktera(recenica.value)[i];
+     // }
 }
+//broj_karaktera(recenica.value).forEach((i) => document.getElementById("broj_karaktera").innerHTML += '<br> Broj karaktera "' + i + '" = ' + broj_karaktera(recenica.value)[i]);
 

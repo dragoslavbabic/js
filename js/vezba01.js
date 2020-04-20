@@ -67,7 +67,6 @@ function ObimPovrsinaFP(){
     const strA=str_a_span.innerHTML = stranica_a.value;
     const strB =str_b_span.innerHTML= stranica_b.value;
     const [ob,pov] = ObimPovrsinaAlt(strA,strB) //ovde je iskoriscena nova mogucnost ECMAScript 6 - "Destructuring Assignment"
-                    
     povrsina.innerHTML = pov;
     obim.innerHTML = ob;
 }

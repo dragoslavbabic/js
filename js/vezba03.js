@@ -1,5 +1,7 @@
 //VEZBA 03, zadatak 01
+
 document.getElementById("dobro_jutro").onclick = function dobroJutro() {
+    
     var hours = prompt("Koliko je sati?");
     var x = 0;
     while (hours > 24 && x < 3) {
@@ -7,14 +9,19 @@ document.getElementById("dobro_jutro").onclick = function dobroJutro() {
         alert("Ne mozete uneti vrednost vecu od 24!!! Pokusajte ponovo!");
         hours = prompt("Koliko je sati?");
     }
+    var start=(new Date).getTime();
     document.getElementById("sat").innerHTML = hours;
     if (hours < 10) {
         document.getElementById("pozdrav").innerHTML = "dobro jutro!";
     } else if (hours > 10 && hours < 19) {
         document.getElementById("pozdrav").innerHTML = "dobar dan!";
-    } else if (hours > 19 && hours < 24)
+    } else if (hours > 19 && hours < 24) {
         document.getElementById("pozdrav").innerHTML = "dobro vece!";
+        alert('Code took '+((new Date).getTime()-start)+'ms');
+    }
+    
 }
+
 
 //zadatak01.01
 //funkcija uradjena pomocu ternarnog operatora kao zamena za if, else if i  else
@@ -29,13 +36,16 @@ function DobaDanaFP(sati){
 
 //primer validacije user inputa pre nego sto se pozove funkcija dobadanafp
 function DobaDana(){
-    const aNumber = Number(window.prompt("Type a number", ""));
+    const aNumber = Number(window.prompt("Unesite broj:", ""));
     return isNaN(aNumber) ? alert("Unesite broj!")
         :aNumber >= 0 && aNumber < 24 ? DobaDanaFP(aNumber): alert("Broj mora biti izmedju 0 i 24!!! Pokusajte ponovo!");
 }
 
 
 
+var start=(new Date).getTime();
+//call your code
+alert('Code took '+((new Date).getTime()-start)+'ms');
 
 
 
